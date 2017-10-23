@@ -6,8 +6,8 @@ import com.emids.junit.calculator.model.Calculator;
 
 public class CalculatorTest {
 
-	@Test
-	 public static final void whenMoreThanTwoNumberThenThrowException()
+	@Test(expected=RuntimeException.class)
+	 public  final void whenMoreThanTwoNumberThenThrowException()
 	 {
 		Calculator.add("1,2,3");
 	 }
