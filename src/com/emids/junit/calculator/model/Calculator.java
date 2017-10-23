@@ -7,19 +7,23 @@ public class Calculator {
 
 	public static int add(String string) {
 		String[] stringArray = string.split(",|n");
-		int sum = 0;
-		// if(stringArray.length>2)
-		// {
-		// throw new RuntimeException("up to two number are allowed sperated by
-		// comma(,)");
-		// }
-		// else
-		// {
-		for (String number : stringArray) {
-			if (!number.trim().isEmpty()) {
-				sum += Integer.parseInt(number);
-			}
-		}
-		return sum;
+		String delimiter = ",|n";
+	    String numbersWithoutDelimiter = string;
+	    if (string.startsWith("//")) {
+	        int delimiterIndex = string.indexOf("//") + 2;
+	        delimiter = string.substring(delimiterIndex, delimiterIndex + 1);
+	        numbersWithoutDelimiter = string.substring(string.indexOf("n") + 1);
+	    }
+	    return add(numbersWithoutDelimiter, delimiter);
+}
+	private static int add(final String numbers, final String delimiter) {
+	    int returnValue = 0;
+	    String[] numbersArray = numbers.split(delimiter);
+	    for (String number : numbersArray) {
+	        if (!number.trim().isEmpty()) {
+	            returnValue += Integer.parseInt(number.trim());
+	        }
+	    }
+	    return returnValue;
 	}
 }

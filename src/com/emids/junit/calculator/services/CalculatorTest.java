@@ -34,7 +34,7 @@ public class CalculatorTest {
 
 	@Test
 	public  final void whenDelimeterIsSpecifiedThenSeparateNumber() {
-		Assert.assertEquals(3 + 6 + 15, Calculator.add("//;n3;6;15"));
+		Assert.assertEquals(3 + 6 + 15, Calculator.add("//;|n3;6;15"));
 	}
 
 	@Test
