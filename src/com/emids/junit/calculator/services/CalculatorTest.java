@@ -7,7 +7,7 @@ import com.emids.junit.calculator.model.Calculator;
 
 public class CalculatorTest {
 
-	@Test(expected = RuntimeException.class)
+	/*@Test(expected = RuntimeException.class)
 	public final void whenMoreThanTwoNumberThenThrowException() {
 		Calculator.add("1,2,3");
 	}
@@ -40,11 +40,11 @@ public class CalculatorTest {
 	@Test(expected=RuntimeException.class)
 	public  final void whenNegativeNumberIsUsedThenThrownException() {
 		Calculator.add("-1,-3,5");
-	}
+	}*/
 
 	@Test
 	public  final void whenOneOfTheNumberIsGreaterThan1000ThenShouldNotBeIncludedInsum() {
-		Assert.assertEquals(2 + 6, Calculator.add("2,1000,1001,6,1234"));
+		Assert.assertEquals(2 + 6+1000, Calculator.add("2,1000,1001,6,1234"));
 	}
 
 }
