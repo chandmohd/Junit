@@ -37,7 +37,7 @@ public class CalculatorTest {
 		Assert.assertEquals(3 + 6 + 15, Calculator.add("//;|n3;6;15"));
 	}
 
-	@Test
+	@Test(expected=RuntimeException.class)
 	public  final void whenNegativeNumberIsUsedThenThrownException() {
 		Calculator.add("-1,-3,5");
 	}
