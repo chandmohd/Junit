@@ -6,7 +6,7 @@ public class Calculator {
 	}
 
 	public static int add(String string) {
-		String[] stringArray = string.split(",");
+		String[] stringArray = string.split(",|n");
 		int sum = 0;
 		// if(stringArray.length>2)
 		// {

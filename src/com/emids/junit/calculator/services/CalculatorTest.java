@@ -28,22 +28,22 @@ public class CalculatorTest {
 	}
 
 	@Test
-	public static final void whenNewLineComesInBetweenThenReturnTheirSumOnly() {
-		Assert.assertEquals(44 + 5 + 6, Calculator.add("44\n5\n6"));
+	public  final void whenNewLineComesInBetweenThenReturnTheirSumOnly() {
+		Assert.assertEquals(3 + 6 + 15, Calculator.add("3,6n15"));
 	}
 
 	@Test
-	public static final void whenDelimeterIsSpecifiedThenSeparateNumber() {
+	public  final void whenDelimeterIsSpecifiedThenSeparateNumber() {
 		Assert.assertEquals(3 + 6 + 15, Calculator.add("//;n3;6;15"));
 	}
 
 	@Test
-	public static final void whenNegativeNumberIsUsedThenThrownException() {
+	public  final void whenNegativeNumberIsUsedThenThrownException() {
 		Calculator.add("-1,-3,5");
 	}
 
 	@Test
-	public static final void whenOneOfTheNumberIsGreaterThan1000ThenShouldNotBeIncludedInsum() {
+	public  final void whenOneOfTheNumberIsGreaterThan1000ThenShouldNotBeIncludedInsum() {
 		Assert.assertEquals(2 + 6, Calculator.add("2,1000,1001,6,1234"));
 	}
 
