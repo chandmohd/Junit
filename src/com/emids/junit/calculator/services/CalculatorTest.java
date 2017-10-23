@@ -45,7 +45,7 @@ public class CalculatorTest {
 	public static final void whenOneOfTheNumberIsGreaterThan1000ThenShouldNotBeIncludedInsum()
 	{
 		Assert.assertEquals(2+6, Calculator.add("2,1000,1001,6,1234"));
-	}s
+	}
 	
 	
 }
