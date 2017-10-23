@@ -12,17 +12,17 @@ public class CalculatorTest {
 		Calculator.add("1,2,3");
 	 }
 	@Test
-	public static final void whenEmptyStringIsUsedthenReturnValueIs0()
+	public final void whenEmptyStringIsUsedthenReturnValueIs0()
 	{
 		Assert.assertEquals(0, Calculator.add(""));
 	}
 	@Test
-	public static final void whenTwoNumberIsUsedThenReturnTheirSum()
+	public  final void whenTwoNumberIsUsedThenReturnTheirSum()
 	{
 		Assert.assertEquals(46, Calculator.add("2,44"));
 	}
 	@Test
-	public static final void whenAnyNumberIsUsedThenReturnTheirSum()
+	public  final void whenAnyNumberIsUsedThenReturnTheirSum()
 	{
 		Assert.assertEquals(2+3+4+5+6, Calculator.add("2,3,4,5,6"));
 	}
@@ -45,7 +45,7 @@ public class CalculatorTest {
 	public static final void whenOneOfTheNumberIsGreaterThan1000ThenShouldNotBeIncludedInsum()
 	{
 		Assert.assertEquals(2+6, Calculator.add("2,1000,1001,6,1234"));
-	}
+	}s
 	
 	
 }
